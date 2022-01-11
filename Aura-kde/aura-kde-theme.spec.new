@@ -1,7 +1,7 @@
 %define repoDir  %{name}-%{version}
 
 Name:           aura-kde-theme
-Version:        1.0.0
+Version:        2022.01.11
 Release:        1%{?dist}
 Summary:        Aura theme
 
