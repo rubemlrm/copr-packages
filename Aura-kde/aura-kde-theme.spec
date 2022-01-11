@@ -18,6 +18,7 @@ Aura kde is a light clean theme for KDE Plasma desktop.
 %autosetup
 
 %install
+ls
 bash install.sh
 
 
