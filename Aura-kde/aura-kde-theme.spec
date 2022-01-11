@@ -24,3 +24,6 @@ bash install.sh
 
 
 %changelog
+* Tue Jan 11 2022 Rubem Mota <rubemmota89@gmail.com> 1.0.0-1
+- new package built with tito
+
