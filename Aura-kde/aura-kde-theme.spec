@@ -1,7 +1,7 @@
 %define repoDir  %{name}-%{version}
 
 Name:           aura-kde-theme
-Version:        2022.01.11
+Version:        1.0.0
 Release:        1%{?dist}
 Summary:        Aura theme
 
@@ -18,11 +18,14 @@ rm -rf %{repoDir}
 git clone %{url} %{repoDir}
 cd %{repoDir}
 
-
 %install
 cd %{repoDir}
 bash install.sh
 
+
 %changelog
+* Tue Jan 11 2022 Rubem Mota <rubemmota89@gmail.com> 1.0.0-1
+- new package built with tito
+
 * Tue Jan 11 2022 Rubem Mota <rubemmota89@gmail.com> - 22.01.11-1
 - Initial package
