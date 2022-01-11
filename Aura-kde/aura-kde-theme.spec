@@ -14,6 +14,7 @@ BuildArch:      noarch
 Aura kde is a light clean theme for KDE Plasma desktop.
 
 %prep
+dnf install git -y
 rm -rf %{repoDir}
 git clone %{url} %{repoDir}
 cd %{repoDir}
@@ -26,4 +27,3 @@ bash install.sh
 %changelog
 * Tue Jan 11 2022 Rubem Mota <rubemmota89@gmail.com> 1.0.0-1
 - new package built with tito
-
