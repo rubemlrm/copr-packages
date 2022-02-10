@@ -1,4 +1,4 @@
-Name:           act
+Name:           act-cli
 Version:        0.2.25
 Release:        1%{?dist}
 Summary:        Run your github workflows locally
@@ -14,20 +14,20 @@ Requires: bash
 Run your GitHub Actions locally!
 
 %prep
-%autosetup -n %{name}-%{version}
+%autosetup -n act-%{version}
 export VERSION=%{version}
 
 make build
 
 %install
 mkdir -p %{buildroot}/%{_bindir}
-install -m 0755 %{_builddir}/%{name}-%{version}/dist/local/%{name} %{buildroot}/%{_bindir}/%{name}
+install -m 0755 %{_builddir}/act-%{version}/dist/local/act %{buildroot}/%{_bindir}/act
 
 
 %files
-%{_bindir}/%{name}
+%{_bindir}/act
 
 
 %changelog
 * Thu Feb 10 2022 Rubem Mota <rubemmota89@gmail.com>
-- teste
+- First commit with act-cli
