@@ -21,13 +21,15 @@ make build
 
 %install
 mkdir -p %{buildroot}/%{_bindir}
-install -m 0755 %{_builddir}/act-%{version}/dist/local/act %{buildroot}/%{_bindir}/act-cli
+install -m 0755 %{_builddir}/act-%{version}/dist/local/act %{buildroot}/%{_bindir}/act
 
 
 %files
-%{_bindir}/act-cli
+%{_bindir}/act
 
 
 %changelog
 * Thu Feb 10 2022 Rubem Mota <rubemmota89@gmail.com>
 - First commit with act-cli
+* Thu Feb 11 2022 Rubem Mota <rubemmota89@gmail.com>
+- Updated spec file because of conflicting package name
