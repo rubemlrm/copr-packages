@@ -21,11 +21,11 @@ make build
 
 %install
 mkdir -p %{buildroot}/%{_bindir}
-install -m 0755 %{_builddir}/act-%{version}/dist/local/act %{buildroot}/%{_bindir}/act
+install -m 0755 %{_builddir}/act-%{version}/dist/local/act %{buildroot}/%{_bindir}/act-cli
 
 
 %files
-%{_bindir}/act
+%{_bindir}/act-cli
 
 
 %changelog
