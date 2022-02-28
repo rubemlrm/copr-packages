@@ -1,5 +1,5 @@
 Name:           numix-kde-theme
-Version:        0.0.1
+Version:        master
 Release:        1%{?dist}
 Summary:        Numix KDE Theme
 
@@ -12,12 +12,15 @@ Requires: bash
 %description
 A modern flat theme with a combination of light and dark elements.
 
+%prep
+%autosetup -n %{name}-%{version}
+
 %install
 mkdir -p %{buildroot}%{_datadir}/plasma/
 mkdir -p %{buildroot}%{_datadir}/plasma/desktoptheme
 mkdir -p %{buildroot}%{_datadir}/plasma/desktoptheme/Numix
 mkdir -p %{buildroot}%{_datadir}/plasma/look-and-feel/org.numixproject.kde
-cp -r %{_builddir}/%{name}/plasma %{_builddir}/%{name}/color-schemes %{buildroot}%{_datadir}
+cp -r %{_builddir}/%{name}-%{version}/plasma %{_builddir}/%{name}/color-schemes %{buildroot}%{_datadir}
 
 %files
 %{_datadir}/color-schemes/Numix.colors
