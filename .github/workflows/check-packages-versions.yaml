@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: check package versions testing
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  check-versions:
+    name: Molecule
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - package_repo_owner: "nektos"
+            package_repo_name: "act"
+            current_version: 'v0.2.25'
+          - package_repo_owner: "ahmetb"
+            package_repo_name: "kubectx"
+            current_version: 'v0.9.4'
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+      - id: check-release
+        uses: Rubemlrm/gh-check-last-release@main
+        with:
+          github_token: ${{ secrets.github_token }}
+          owner: "${{ matrix.package_repo_owner }}"
+          repo: "${{ matrix.package_repo_name }}"
+      - name: debug
+        run: echo "{{ matrix.current_version }} | ${{ steps.check-release.outputs.release }}"
+      - name: Create Issue to update package
+        if: matrix.current_version != steps.check-release.outputs.release
+        uses: JasonEtco/create-an-issue@v2
+        with:
+          update_existing: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_NAME: ${{ matrix.package_repo_name }}
+          VERSION: ${{ steps.check-release.outputs.release }}
+          CHANGELOG: ${{ steps.check-release.outputs.body }}
