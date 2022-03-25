@@ -35,8 +35,6 @@ jobs:
           github_token: ${{ secrets.github_token }}
           owner: "${{ matrix.package_repo_owner }}"
           repo: "${{ matrix.package_repo_name }}"
-      - name: debug
-        run: echo "{{ matrix.current_version }} | ${{ steps.check-release.outputs.release }}"
       - name: Create Issue to update package
         if: matrix.current_version != steps.check-release.outputs.release
         uses: JasonEtco/create-an-issue@v2
