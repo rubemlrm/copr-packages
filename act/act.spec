@@ -1,5 +1,5 @@
 Name:           act-cli
-Version:        0.2.25
+Version:        0.2.26
 Release:        1%{?dist}
 Summary:        Run your github workflows locally
 
@@ -33,3 +33,5 @@ install -m 0755 %{_builddir}/act-%{version}/dist/local/act %{buildroot}/%{_bindi
 - First commit with act-cli
 * Thu Feb 11 2022 Rubem Mota <rubemmota89@gmail.com>
 - Updated spec file because of conflicting package name
+* Thu Mar 26 2022 Rubem Mota <rubemmota89@gmail.com>
+- Updated act package to version 0.2.26
