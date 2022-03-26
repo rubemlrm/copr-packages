@@ -12,6 +12,6 @@ Personal project to bring some utils that i use that don't exists on Fedora Copr
 
 | Package | Project Url  | Version | Targets | Architectures |
 ----------|--------------|---------|---------|---------------|
-| act     | [link](https://github.com/nektos/act)       | 0.2.25  | Fedora 35,36,Rawhide | x64,  armhfp, aarch64 |
+| act     | [link](https://github.com/nektos/act)       | 0.2.26  | Fedora 35,36,Rawhide | x64,  armhfp, aarch64 |
 | Kubectx     | [link](https://github.com/ahmetb/kubectx)      | 0.9.4  | Fedora 35,36,Rawhide | x64,  armhfp, aarch64 |
 | numix kde theme     | [link](https://github.com/numixproject/numix-kde-theme)      | 0.0.1 | Fedora 35,36,Rawhide | x64,  armhfp, aarch64 |
