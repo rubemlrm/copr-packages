@@ -18,7 +18,7 @@ Nordzy is a free and open source icon theme for Linux desktops using the Nord co
 %install
 mkdir -p "%{buildroot}%{_datadir}icons"
 install -dm755 "%{buildroot}%{_datadir}icons"
-%{_builddir}/Nordzy-icon-%{version}/install.sh -d "%{buildroot}%{_datadir}/icons" -t all
+%{_builddir}/nordzy-icon-theme-%{version}/install.sh -d "%{buildroot}%{_datadir}/icons" -t all
 
 
 %files
