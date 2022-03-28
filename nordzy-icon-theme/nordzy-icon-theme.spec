@@ -1,4 +1,4 @@
-Name:           nordzy-icon-theme
+Name:           nordzy-icon
 Version:        1.3
 Release:        1%{?dist}
 Summary:        Nordzy Icons
@@ -13,12 +13,15 @@ BuildArch:      noarch
 %description
 Nordzy is a free and open source icon theme for Linux desktops using the Nord color palette from Arctic Ice Studio and based on WhiteSur Icon Theme and Numix Icon Theme
 
-%autosetup
+%prep
+%autosetup -n Nordzy-icon-%{version}
+
 
 %install
 mkdir -p "%{buildroot}%{_datadir}icons"
 install -dm755 "%{buildroot}%{_datadir}icons"
-%{_builddir}/nordzy-icon-theme-%{version}/install.sh -d "%{buildroot}%{_datadir}/icons" -t all
+echo %{_builddir}
+%{_builddir}/Nordzy-icon-%{version}/install.sh -d "%{buildroot}%{_datadir}/icons" -t all
 
 
 %files
