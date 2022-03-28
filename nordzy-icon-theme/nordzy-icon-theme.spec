@@ -7,7 +7,7 @@ License: Apache License 2.0
 URL: https://github.com/alvatip/Nordzy-icon
 Source0: https://github.com/alvatip/Nordzy-icon/archive/refs/tags/%{version}.tar.gz
 
-Requires: bash
+Requires: bash, hicolor-icon-theme, gtk-update-icon-cache
 BuildArch:      noarch
 
 %description
