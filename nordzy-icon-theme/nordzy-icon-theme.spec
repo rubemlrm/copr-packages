@@ -8,6 +8,7 @@ URL: https://github.com/alvatip/Nordzy-icon
 Source0: https://github.com/alvatip/Nordzy-icon/archive/refs/tags/%{version}.tar.gz
 
 Requires: bash, hicolor-icon-theme, gtk-update-icon-cache
+BuildRequires: gtk-update-icon-cache
 BuildArch:      noarch
 
 %description
