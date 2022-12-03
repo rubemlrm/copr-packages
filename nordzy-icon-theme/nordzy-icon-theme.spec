@@ -1,5 +1,5 @@
 Name:           nordzy-icon
-Version:        1.3
+Version:        1.7.6
 Release:        1%{?dist}
 Summary:        Nordzy Icons
 
@@ -31,3 +31,5 @@ echo %{_builddir}
 %changelog
 * Tue Mar 27 2022 Rubem Mota <rubemmota89@gmail.com>
 - Added First version install of icons
+* Tue Dec 03 Rubem Mota <rubemmota89@gmail.com>
+- Updated act package to version 1.7.6
