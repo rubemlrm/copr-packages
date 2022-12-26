@@ -21,13 +21,13 @@ jobs:
         include:
           - package_repo_owner: "nektos"
             package_repo_name: "act"
-            current_version: 'v0.2.26'
+            current_version: 'v0.2.34'
           - package_repo_owner: "ahmetb"
             package_repo_name: "kubectx"
             current_version: 'v0.9.4'
           - package_repo_owner: "alvatip"
             package_repo_name: "Nordzy-icon"
-            current_version: '1.3'
+            current_version: '1.7.6'
     steps:
       - name: Check out the codebase.
         uses: actions/checkout@v2
