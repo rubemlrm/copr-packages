@@ -36,6 +36,7 @@ autoreconf -fi
 
 %files
 %{_bindir}/i3lock
+%{_mandir}/man1/i3lock.1.*
 %{_sysconfdir}/pam.d/i3lock
 %doc README.md i3lock.1 CHANGELOG
 %license LICENSE

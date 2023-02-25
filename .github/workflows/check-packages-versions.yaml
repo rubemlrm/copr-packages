@@ -21,13 +21,16 @@ jobs:
         include:
           - package_repo_owner: "nektos"
             package_repo_name: "act"
-            current_version: 'v0.2.40'
+            current_version: 'v0.2.42'
           - package_repo_owner: "ahmetb"
             package_repo_name: "kubectx"
             current_version: 'v0.9.4'
           - package_repo_owner: "alvatip"
             package_repo_name: "Nordzy-icon"
             current_version: '1.8.1'
+          - package_repo_owner: "Raymo111"
+            package_repo_name: "i3lock-color"
+            current_version: '2.13.c.4'
     steps:
       - name: Check out the codebase.
         uses: actions/checkout@v2
