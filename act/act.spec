@@ -33,9 +33,9 @@ install -m 0755 %{_builddir}/act-%{version}/dist/local/act %{buildroot}/%{_bindi
 * Updated act package to version 0.2.42
 * Thu Jan 19 2023 Rubem Mota <rubemmota89@gmail.com>
 - Updated act package to version 0.2.40
-* Thu Dec 03 2022 Rubem Mota <rubemmota89@gmail.com>
+* Fri Dec 03 2022 Rubem Mota <rubemmota89@gmail.com>
 - Updated act package to version 0.2.34
-* Thu Mar 26 2022 Rubem Mota <rubemmota89@gmail.com>
+* Fri Mar 26 2022 Rubem Mota <rubemmota89@gmail.com>
 - Updated act package to version 0.2.26
 * Fri Feb 11 2022 Rubem Mota <rubemmota89@gmail.com>
 - Updated spec file because of conflicting package name
