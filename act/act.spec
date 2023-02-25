@@ -1,5 +1,5 @@
 Name:           act-cli
-Version:        0.2.40
+Version:        0.2.42
 Release:        1%{?dist}
 Summary:        Run your github workflows locally
 
