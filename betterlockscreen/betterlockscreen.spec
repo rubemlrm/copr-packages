@@ -7,7 +7,7 @@ License: Apache License 2.0
 URL: https://github.com/betterlockscreen/betterlockscreen
 Source0: https://github.com/betterlockscreen/betterlockscreen/archive/refs/tags/v%{version}.tar.gz
 
-Requires: bash bc feh i3lock-color imagemagick xrandr xdpyinfo
+Requires: bash bc feh i3lock-color ImageMagick xrandr xdpyinfo
 
 %description
 Kubernetes context manager for bash and zsh.
