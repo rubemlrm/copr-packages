@@ -31,5 +31,7 @@ install -Dm 644 -p %{_builddir}/%{name}-%{version}/LICENSE -t "%{buildroot}/usr/
 /usr/share/licenses/betterlockscreen/LICENSE
 
 %changelog
+* Sun Feb 26 2023 Rubem Mota <rubemmota89@gmail.com>
+- Fixed ImageMagick dependency name
 * Sat Feb 25 2023 Rubem Mota <rubemmota89@gmail.com>
 - Added First version of betterlockscreen
