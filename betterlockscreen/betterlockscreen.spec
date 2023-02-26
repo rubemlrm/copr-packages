@@ -3,7 +3,7 @@ Version:        4.0.4
 Release:        1%{?dist}
 Summary:        The Kubernetes context manager
 
-License: Apache License 2.0
+License: MIT
 URL: https://github.com/betterlockscreen/betterlockscreen
 Source0: https://github.com/betterlockscreen/betterlockscreen/archive/refs/tags/v%{version}.tar.gz
 
@@ -31,6 +31,8 @@ install -Dm 644 -p %{_builddir}/%{name}-%{version}/LICENSE -t "%{buildroot}/usr/
 /usr/share/licenses/betterlockscreen/LICENSE
 
 %changelog
+* Sun Feb 26 2023 Rubem Mota <rubemmota89@gmail.com>
+- Fixed package license to MIT
 * Sun Feb 26 2023 Rubem Mota <rubemmota89@gmail.com>
 - Fixed ImageMagick dependency name
 * Sat Feb 25 2023 Rubem Mota <rubemmota89@gmail.com>
