@@ -44,7 +44,7 @@ jobs:
           owner: "${{ matrix.package_repo_owner }}"
           repo: "${{ matrix.package_repo_name }}"
       - name: Create Issue to update package
-        if: matrix.current_version != steps.check-release.outputs.release
+        if: matrix.tag_name != steps.check-release.outputs.release
         uses: JasonEtco/create-an-issue@v2
         with:
           update_existing: true
