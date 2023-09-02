@@ -21,7 +21,7 @@ jobs:
         include:
           - package_repo_owner: "nektos"
             package_repo_name: "act"
-            current_version: 'v0.2.49'
+            current_version: 'v0.2.50'
           - package_repo_owner: "ahmetb"
             package_repo_name: "kubectx"
             current_version: 'v0.9.4'
