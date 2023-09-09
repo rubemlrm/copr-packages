@@ -1,5 +1,5 @@
 Name:           kubectx
-Version:        0.9.4
+Version:        0.9.5
 Release:        1%{?dist}
 Summary:        The Kubernetes context manager
 
@@ -39,5 +39,7 @@ install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubens.fish "%{bui
 %{_datadir}/fish/vendor_completions.d/kubens.fish
 
 %changelog
+* Sat Sep 09 2023 Rubem Mota <rubemmota89@gmail.com>
+- Updated to version v0.9.5
 * Tue Feb 12 2022 Rubem Mota <rubemmota89@gmail.com>
 - Added First version install of kubectx and kubens
