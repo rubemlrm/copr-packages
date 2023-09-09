@@ -1,5 +1,5 @@
 Name:           betterlockscreen
-Version:        4.0.4
+Version:        4.2.0
 Release:        1%{?dist}
 Summary:        The Kubernetes context manager
 
@@ -31,6 +31,8 @@ install -Dm 644 -p %{_builddir}/%{name}-%{version}/LICENSE -t "%{buildroot}/usr/
 /usr/share/licenses/betterlockscreen/LICENSE
 
 %changelog
+* Sun Sep 09 2023 Rubem Mota <rubemmota89@gmail.com>
+- Updated to version v4.2.0
 * Sun Feb 26 2023 Rubem Mota <rubemmota89@gmail.com>
 - Fixed package license to MIT
 * Sun Feb 26 2023 Rubem Mota <rubemmota89@gmail.com>
