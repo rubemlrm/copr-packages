@@ -30,7 +30,7 @@ jobs:
             current_version: '1.8.5'
           - package_repo_owner: "Raymo111"
             package_repo_name: "i3lock-color"
-            current_version: '2.13.c.4'
+            current_version: '2.13.c.5'
           - package_repo_owner: "betterlockscreen"
             package_repo_name: "betterlockscreen"
             current_version: 'v4.2.0'

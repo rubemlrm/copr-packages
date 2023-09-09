@@ -1,5 +1,5 @@
 Name:           i3lock-color
-Version:        2.13.c.4
+Version:        2.13.c.5
 Release:        1%{?dist}
 Summary:        The world's most popular non-default computer lockscreen.
 
@@ -42,5 +42,7 @@ autoreconf -fi
 %license LICENSE
 
 %changelog
+* Sat Sep 09 2023 Rubem Mota <rubemmota89@gmail.com>
+* Updated to version 2.13.c.5
 * Sat Feb 25 2023 Rubem Mota <rubemmota89@gmail.com>
 * First release
