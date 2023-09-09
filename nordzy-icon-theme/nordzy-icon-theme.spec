@@ -1,5 +1,5 @@
 Name:           nordzy-icon
-Version:        1.8.1
+Version:        1.8.5
 Release:        1%{?dist}
 Summary:        Nordzy Icons
 
@@ -35,3 +35,5 @@ echo %{_builddir}
 - Updated act package to version 1.7.6
 * Tue Jan 19 Rubem Mota <rubemmota89@gmail.com>
 - Updated act package to version 1.8.1
+* Sat Sep 09 Rubem Mota <rubemmota89@gmail.com>
+- Updated act package to version 1.8.5

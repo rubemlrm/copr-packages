@@ -27,7 +27,7 @@ jobs:
             current_version: 'v0.9.4'
           - package_repo_owner: "alvatip"
             package_repo_name: "Nordzy-icon"
-            current_version: '1.8.1'
+            current_version: '1.8.5'
           - package_repo_owner: "Raymo111"
             package_repo_name: "i3lock-color"
             current_version: '2.13.c.4'
