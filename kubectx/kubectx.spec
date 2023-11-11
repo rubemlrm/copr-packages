@@ -22,8 +22,8 @@ install -Dm 755 -p %{_builddir}/%{name}-%{version}/kubectx %{_builddir}/%{name}-
 # completion
 install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubectx.bash "%{buildroot}%{_datadir}/bash-completion/completions/kubectx"
 install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubens.bash "%{buildroot}%{_datadir}/bash-completion/completions/kubens"
-install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubectx.zsh "%{buildroot}%{_datadir}/zsh/site-functions/_kubectx"
-install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubens.zsh "%{buildroot}%{_datadir}/zsh/site-functions/_kubens"
+install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/_kubectx.zsh "%{buildroot}%{_datadir}/zsh/site-functions/_kubectx"
+install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/_kubens.zsh "%{buildroot}%{_datadir}/zsh/site-functions/_kubens"
 install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubectx.fish "%{buildroot}%{_datadir}/fish/vendor_completions.d/kubectx.fish"
 install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubens.fish "%{buildroot}%{_datadir}/fish/vendor_completions.d/kubens.fish"
 
@@ -39,6 +39,8 @@ install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubens.fish "%{bui
 %{_datadir}/fish/vendor_completions.d/kubens.fish
 
 %changelog
+* Sat Nov 11 2023 Rubem Mota <rubemmota89@gmail.com>
+- Fixed building workflow
 * Sat Sep 09 2023 Rubem Mota <rubemmota89@gmail.com>
 - Updated to version v0.9.5
 * Tue Feb 12 2022 Rubem Mota <rubemmota89@gmail.com>
