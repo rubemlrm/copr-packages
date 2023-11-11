@@ -1,5 +1,5 @@
 Name:           act-cli
-Version:        0.2.50
+Version:        0.2.53
 Release:        1%{?dist}
 Summary:        Run your github workflows locally
 
@@ -29,6 +29,8 @@ install -m 0755 %{_builddir}/act-%{version}/dist/local/act %{buildroot}/%{_bindi
 
 
 %changelog
+* Sat Nov 11 2023 Rubem Mota <rubemmota89@gmail.com>
+* Updated act package to version 0.2.53
 * Sat Sep 01 2023 Rubem Mota <rubemmota89@gmail.com>
 * Updated act package to version 0.2.50
 * Sat Aug 26 2023 Rubem Mota <rubemmota89@gmail.com>
