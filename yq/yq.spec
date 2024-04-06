@@ -21,7 +21,7 @@ make build
 
 %install
 mkdir -p %{buildroot}/%{_bindir}
-install -m 0755 %{_builddir}/act-%{version}/dist/local/yq %{buildroot}/%{_bindir}/yq
+install -m 0755 %{_builddir}/yq-%{version}/dist/local/yq %{buildroot}/%{_bindir}/yq
 
 
 %files
