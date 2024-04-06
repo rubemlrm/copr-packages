@@ -49,6 +49,7 @@ jobs:
             echo "CREATE=1" >> $GITHUB_OUTPUT
           else
             echo "CREATE=0" >> $GITHUB_OUTPUT
+          fi
       - name: Create Issue to update package
         if: steps.check-version.outputs.CREATE == 1
         uses: JasonEtco/create-an-issue@v2
