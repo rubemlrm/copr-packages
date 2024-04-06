@@ -52,8 +52,10 @@ jobs:
           
           #if [ "$CHECK_WITH_VERSION" -eq 0 ] && [ "$CHECK_WITHOUT_VERSION" -eq 0 ]; then
           if [ "$CHECK_WITH_VERSION" -eq 0 ]; then  
+            echo "test 1"
             echo "CREATE=1" >> $GITHUB_OUTPUT
           else
+            echo "test 2"
             echo "CREATE=0" >> $GITHUB_OUTPUT
           fi
       - name: Create Issue to update package
