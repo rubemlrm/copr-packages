@@ -47,10 +47,10 @@ jobs:
           LATEST_VERSION_WITHOUT_V=$(echo "${{ steps.check-release.outputs.tag_name }}" | tr -d "v")
           PACKAGE_DIR="${{ github.workspace }}/${{ matrix.package_repo_name }}"
           CHECK_FINDINGS=$(grep -R "$LATEST_VERSION_WITHOUT_V" "$PACKAGE_DIR" | wc -l)
-          if [[ "$CHECK_FINDINGS" -eq "0" ]]; then  
-            echo "CREATE=1" >> $GITHUB_OUTPUT
-          else
+          if [[ "$CHECK_FINDINGS" -ne "0" ]]; then  
             echo "CREATE=0" >> $GITHUB_OUTPUT
+          else
+            echo "CREATE=1" >> $GITHUB_OUTPUT
           fi
       - name: Create Issue to update package
         if: steps.check-version.outputs.CREATE == 1
