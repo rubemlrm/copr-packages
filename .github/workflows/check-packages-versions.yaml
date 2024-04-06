@@ -43,8 +43,8 @@ jobs:
         shell: bash
         id: check-version
         run: |
-          CHECK_WITH_VERSION=$(grep -R ${{ steps.check-release.outputs.tag_name}} ./${{matrix.repo_name}} | wc -l)
-          CHECK_WITHOUT_VERSION=$(grep -R ${{ steps.check-release.outputs.tag_name}} ./${{matrix.repo_name}} | wc -l)
+          CHECK_WITH_VERSION=$(grep -R ${{ steps.check-release.outputs.tag_name}} ./${{ matrix.package_repo_name }} | wc -l)
+          CHECK_WITHOUT_VERSION=$(grep -R ${{ steps.check-release.outputs.tag_name}} ./${{ matrix.package_repo_name }} | wc -l)
           if [ "$CHECK_WITH_VERSION" -eq 0 ] && [ "$CHECK_WITHOUT_VERSION" -eq 0]; then
             echo "CREATE=1" >> $GITHUB_OUTPUT
           else
