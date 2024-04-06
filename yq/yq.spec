@@ -14,7 +14,7 @@ Requires: bash
 Portable command-line YAML processor
 
 %prep
-%autosetup -n act-%{version}
+%autosetup -n yq-%{version}
 export VERSION=%{version}
 
 make build
