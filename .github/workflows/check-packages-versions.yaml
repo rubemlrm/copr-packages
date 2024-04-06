@@ -43,6 +43,7 @@ jobs:
         shell: bash
         id: check-version
         run: |
+          set -x
           LATEST_VERSION_WITHOUT_V=$(echo "${{ steps.check-release.outputs.tag_name }}" | tr -d "v")
           PACKAGE_DIR="${{ github.workspace }}/${{ matrix.package_repo_name }}"
           CHECK_FINDINGS=$(grep -R "$LATEST_VERSION_WITHOUT_V" "$PACKAGE_DIR" | wc -l)
