@@ -46,10 +46,12 @@ jobs:
           set -x
           LATEST_VERSION=${{ steps.check-release.outputs.tag_name }}
           LATEST_VERSION_WITHOUT_V=$(echo "$LATEST_VERSION" | tr -d "v")
-          echo $LATEST_VERSION_WITHOUT_V
+    
           CHECK_WITH_VERSION=$(grep -R "$LATEST_VERSION" ./${{ matrix.package_repo_name }} | wc -l)
-          CHECK_WITHOUT_VERSION=$(grep -R "$LATEST_VERSION_WITHOUT_V" ./${{ matrix.package_repo_name }} | wc -l)
-          if [ "$CHECK_WITH_VERSION" -eq 0 ] || [ "$CHECK_WITHOUT_VERSION" -eq 0]; then
+          #CHECK_WITHOUT_VERSION=$(grep -R "$LATEST_VERSION_WITHOUT_V" ./${{ matrix.package_repo_name }} | wc -l)
+          
+          #if [ "$CHECK_WITH_VERSION" -eq 0 ] && [ "$CHECK_WITHOUT_VERSION" -eq 0 ]; then
+          if [ "$CHECK_WITH_VERSION" -eq 0 ]; then  
             echo "CREATE=1" >> $GITHUB_OUTPUT
           else
             echo "CREATE=0" >> $GITHUB_OUTPUT
