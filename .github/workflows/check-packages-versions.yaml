@@ -46,6 +46,7 @@ jobs:
           set -x
           LATEST_VERSION_WITHOUT_V=$(echo "${{ steps.check-release.outputs.tag_name }}" | tr -d "v")
           PACKAGE_DIR="${{ github.workspace }}/${{ matrix.package_repo_name }}"
+          grep -R "$LATEST_VERSION_WITHOUT_V" "$PACKAGE_DIR"
           CHECK_FINDINGS=$(grep -R "$LATEST_VERSION_WITHOUT_V" "$PACKAGE_DIR")
           if [[ -z "$CHECK_FINDINGS" ]]; then 
             echo "teste teste teste"
