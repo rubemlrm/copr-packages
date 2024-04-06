@@ -48,7 +48,7 @@ jobs:
           LATEST_VERSION_WITHOUT_V=$(echo "$LATEST_VERSION" | tr -d "v")
     
           CHECK_WITH_VERSION=$(grep -R "$LATEST_VERSION" ./${{ matrix.package_repo_name }} | wc -l)
-          echo $CHECK_WITH_VERSION
+          echo "$CHECK_WITH_VERSION - teste "
           #CHECK_WITHOUT_VERSION=$(grep -R "$LATEST_VERSION_WITHOUT_V" ./${{ matrix.package_repo_name }} | wc -l)
           
           #if [ "$CHECK_WITH_VERSION" -eq 0 ] && [ "$CHECK_WITHOUT_VERSION" -eq 0 ]; then
