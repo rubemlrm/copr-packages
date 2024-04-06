@@ -1,5 +1,5 @@
 Name:           nordzy-icon
-Version:        1.8.5
+Version:        1.8.6
 Release:        1%{?dist}
 Summary:        Nordzy Icons
 
@@ -29,11 +29,14 @@ echo %{_builddir}
 %{_datadir}/icons
 
 %changelog
+
+* Sat Apr 06 2024 Rubem Mota <rubemmota89@gmail.com>
+* Updated act package to version 1.8.6
+* Sat Sep 09 2023 Rubem Mota <rubemmota89@gmail.com>
+- Updated act package to version 1.8.5
+* Tue Jan 19 2023 Rubem Mota <rubemmota89@gmail.com>
+- Updated act package to version 1.8.1
+* Tue Dec 03 2023 Rubem Mota <rubemmota89@gmail.com>
+- Updated act package to version 1.7.6
 * Tue Mar 27 2022 Rubem Mota <rubemmota89@gmail.com>
 - Added First version install of icons
-* Tue Dec 03 Rubem Mota <rubemmota89@gmail.com>
-- Updated act package to version 1.7.6
-* Tue Jan 19 Rubem Mota <rubemmota89@gmail.com>
-- Updated act package to version 1.8.1
-* Sat Sep 09 Rubem Mota <rubemmota89@gmail.com>
-- Updated act package to version 1.8.5
