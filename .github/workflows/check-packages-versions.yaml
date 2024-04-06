@@ -46,11 +46,12 @@ jobs:
           set -x
           LATEST_VERSION=${{ steps.check-release.outputs.tag_name }}
           CHECK_WITH_VERSION=$(grep -R "$LATEST_VERSION" ./${{ matrix.package_repo_name }} | wc -l)
+          echo "${LATEST_VERSION//v}"
           CHECK_WITHOUT_VERSION=$(grep -R "${LATEST_VERSION//v}" ./${{ matrix.package_repo_name }} | wc -l)
-          if [ "$CHECK_WITH_VERSION" -eq 0 ] && [ "$CHECK_WITHOUT_VERSION" -eq 0]; then
-            echo "CREATE=0" >> $GITHUB_OUTPUT
-          else
+          if [ "$CHECK_WITH_VERSION" -eq 0 ] || [ "$CHECK_WITHOUT_VERSION" -eq 0]; then
             echo "CREATE=1" >> $GITHUB_OUTPUT
+          else
+            echo "CREATE=0" >> $GITHUB_OUTPUT
           fi
       - name: Create Issue to update package
         if: steps.check-version.outputs.CREATE == 1
