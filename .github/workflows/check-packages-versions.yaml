@@ -43,19 +43,12 @@ jobs:
         shell: bash
         id: check-version
         run: |
-          set -x
           LATEST_VERSION_WITHOUT_V=$(echo "${{ steps.check-release.outputs.tag_name }}" | tr -d "v")
           PACKAGE_DIR="${{ github.workspace }}/${{ matrix.package_repo_name }}"
           CHECK_FINDINGS=$(grep -R "$LATEST_VERSION_WITHOUT_V" "$PACKAGE_DIR" | wc -l)
-          echo "$CHECK_FINDINGS - teste "
-          #CHECK_WITHOUT_VERSION=$(grep -R "$LATEST_VERSION_WITHOUT_V" ./${{ matrix.package_repo_name }} | wc -l)
-          
-          #if [ "$CHECK_WITH_VERSION" -eq 0 ] && [ "$CHECK_WITHOUT_VERSION" -eq 0 ]; then
           if [[ "$CHECK_FINDINGS" -eq 0 ]]; then  
-            echo "test 1"
             echo "CREATE=1" >> $GITHUB_OUTPUT
           else
-            echo "test2"
             echo "CREATE=0" >> $GITHUB_OUTPUT
           fi
       - name: Create Issue to update package
